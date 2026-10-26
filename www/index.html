@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIJOY HACKING LAB</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 20px;
+    background: #050b14;
+    color: #eafaff;
+    font-family: Arial, sans-serif;
+}
+header {
+    text-align: center;
+    padding: 25px 5px;
+    border: 1px solid #00e5ff;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #101d32, #06101c);
+    box-shadow: 0 0 18px #00e5ff33;
+}
+.logo {
+    font-size: 45px;
+}
+h1 {
+    color: #00e5ff;
+    font-size: 25px;
+    margin: 10px 0;
+}
+.subtitle {
+    color: #65ffb5;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.status {
+    color: #65ffb5;
+    font-size: 12px;
+    margin-top: 15px;
+}
+h2 {
+    color: #00e5ff;
+    font-size: 18px;
+    margin-top: 28px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+.card {
+    background: #0c1727;
+    border: 1px solid #173b50;
+    border-radius: 15px;
+    padding: 20px 12px;
+    min-height: 145px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.card:active {
+    transform: scale(0.96);
+    border-color: #00e5ff;
+}
+.icon {
+    font-size: 30px;
+}
+.card h3 {
+    color: #65ffb5;
+    font-size: 14px;
+    margin: 12px 0 7px;
+}
+.card p {
+    color: #a7b8cb;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.panel {
+    margin-top: 20px;
+    padding: 18px;
+    background: #0c1727;
+    border-radius: 14px;
+    border: 1px solid #173b50;
+}
+button {
+    width: 100%;
+    padding: 13px;
+    background: #00d5e8;
+    color: #031019;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+}
+footer {
+    text-align: center;
+    margin: 28px 0 10px;
+    color: #70869a;
+    font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🛡️</div>
+    <h1>BIJOY HACKING LAB</h1>
+    <div class="subtitle">CYBERSECURITY • LEARN • PRACTICE</div>
+    <div class="status">● SYSTEM ONLINE</div>
+</header>
+
+<h2>⚡ SECURITY MODULES</h2>
+
+<div class="grid">
+
+    <div class="card" onclick="openModule('Social Media Security')">
+        <div class="icon">📱</div>
+        <h3>Social Media</h3>
+        <p>অ্যাকাউন্ট সুরক্ষা ও নিরাপত্তা শেখা</p>
+    </div>
+
+    <div class="card" onclick="openModule('Wi-Fi Security')">
+        <div class="icon">📶</div>
+        <h3>Wi-Fi Security</h3>
+        <p>ওয়াই-ফাই নিরাপত্তার ধারণা শেখা</p>
+    </div>
+
+    <div class="card" onclick="openModule('Database Security')">
+        <div class="icon">🗄️</div>
+        <h3>Database Security</h3>
+        <p>ডেটাবেস সুরক্ষার প্রাথমিক পাঠ</p>
+    </div>
+
+    <div class="card" onclick="openModule('Anonymous Surfing')">
+        <div class="icon">🌐</div>
+        <h3>Anonymous Surfing</h3>
+        <p>অনলাইন গোপনীয়তা রক্ষা শেখা</p>
+    </div>
+
+</div>
+
+<div class="panel" id="details">
+    <h2>🔐 Welcome to the Lab</h2>
+    <p>স্যার, শেখার জন্য উপরের যেকোনো একটি মডিউল নির্বাচন করুন।</p>
+</div>
+
+<div class="panel">
+    <h2>💻 Learning Center</h2>
+    <p>Linux, Termux এবং Cybersecurity-এর প্রাথমিক ধারণা শিখুন।</p>
+    <button onclick="openModule('Linux ও Termux')">
+        START LEARNING
+    </button>
+</div>
+
+<footer>
+    BIJOY HACKING LAB © 2026<br>
+    Learn ethically. Stay secure.
+</footer>
+
+<script>
+function openModule(name) {
+    document.getElementById("details").innerHTML =
+        "<h2>🔐 " + name + "</h2>" +
+        "<p>এই বিভাগটি শেখার জন্য তৈরি। " +
+        "শুধু নিজের সিস্টেম বা অনুমতি পাওয়া পরিবেশে " +
+        "নিরাপত্তা পরীক্ষা করুন।</p>" +
+        "<button onclick=\"showWelcome()\">BACK</button>";
+}
+
+function showWelcome() {
+    document.getElementById("details").innerHTML =
+        "<h2>🔐 Welcome to the Lab</h2>" +
+        "<p>স্যার, শেখার জন্য উপরের যেকোনো একটি মডিউল নির্বাচন করুন।</p>";
+}
+</script>
+
+</body>
+</html>
