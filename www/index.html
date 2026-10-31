@@ -4,178 +4,233 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BIJOY HACKING LAB</title>
-
 <style>
-* {
-    box-sizing: border-box;
+*{box-sizing:border-box}
+body{
+ margin:0;padding:16px;background:#050b14;
+ color:#eafaff;font-family:Arial,sans-serif
 }
-body {
-    margin: 0;
-    padding: 20px;
-    background: #050b14;
-    color: #eafaff;
-    font-family: Arial, sans-serif;
+header,.panel,.card{
+ background:#0c1727;border:1px solid #173b50;
+ border-radius:15px;padding:17px;margin-bottom:14px
 }
-header {
-    text-align: center;
-    padding: 25px 5px;
-    border: 1px solid #00e5ff;
-    border-radius: 18px;
-    background: linear-gradient(145deg, #101d32, #06101c);
-    box-shadow: 0 0 18px #00e5ff33;
+header{text-align:center;background:linear-gradient(145deg,#101d32,#06101c);border-color:#00e5ff}
+.logo{font-size:42px}
+h1,h2{color:#00e5ff}
+h1{font-size:23px}
+h2{font-size:18px}
+.subtitle,.status{color:#65ffb5;font-size:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{min-height:130px;cursor:pointer}
+.card:active{border-color:#00e5ff}
+.card h3{color:#65ffb5;font-size:14px}
+.card p,p{font-size:13px;line-height:1.7;color:#c1d0df}
+.icon{font-size:28px}
+button{
+ width:100%;padding:13px;margin-top:9px;
+ border:0;border-radius:9px;background:#00d5e8;
+ color:#031019;font-weight:bold;font-size:14px
 }
-.logo {
-    font-size: 45px;
+input{
+ width:100%;padding:13px;margin:8px 0;
+ background:#07111e;color:white;border:1px solid #176078;
+ border-radius:8px;font-size:15px
 }
-h1 {
-    color: #00e5ff;
-    font-size: 25px;
-    margin: 10px 0;
+pre{
+ white-space:pre-wrap;overflow-wrap:anywhere;
+ background:#050b14;padding:12px;border-radius:8px;
+ color:#65ffb5;font-size:13px
 }
-.subtitle {
-    color: #65ffb5;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-.status {
-    color: #65ffb5;
-    font-size: 12px;
-    margin-top: 15px;
-}
-h2 {
-    color: #00e5ff;
-    font-size: 18px;
-    margin-top: 28px;
-}
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 13px;
-}
-.card {
-    background: #0c1727;
-    border: 1px solid #173b50;
-    border-radius: 15px;
-    padding: 20px 12px;
-    min-height: 145px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-.card:active {
-    transform: scale(0.96);
-    border-color: #00e5ff;
-}
-.icon {
-    font-size: 30px;
-}
-.card h3 {
-    color: #65ffb5;
-    font-size: 14px;
-    margin: 12px 0 7px;
-}
-.card p {
-    color: #a7b8cb;
-    font-size: 12px;
-    line-height: 1.5;
-}
-.panel {
-    margin-top: 20px;
-    padding: 18px;
-    background: #0c1727;
-    border-radius: 14px;
-    border: 1px solid #173b50;
-}
-button {
-    width: 100%;
-    padding: 13px;
-    background: #00d5e8;
-    color: #031019;
-    border: none;
-    border-radius: 9px;
-    font-size: 15px;
-    font-weight: bold;
-}
-footer {
-    text-align: center;
-    margin: 28px 0 10px;
-    color: #70869a;
-    font-size: 12px;
-}
+footer{text-align:center;color:#70869a;font-size:12px;padding:15px}
+.small{font-size:11px;color:#8da5b9}
 </style>
 </head>
-
 <body>
 
 <header>
-    <div class="logo">🛡️</div>
-    <h1>BIJOY HACKING LAB</h1>
-    <div class="subtitle">CYBERSECURITY • LEARN • PRACTICE</div>
-    <div class="status">● SYSTEM ONLINE</div>
+ <div class="logo">🛡️</div>
+ <h1>BIJOY HACKING LAB</h1>
+ <div class="subtitle">CYBERSECURITY • LEARN • PRACTICE</div>
+ <div class="status">● SYSTEM ONLINE</div>
 </header>
 
 <h2>⚡ SECURITY MODULES</h2>
-
 <div class="grid">
-
-    <div class="card" onclick="openModule('Social Media Security')">
-        <div class="icon">📱</div>
-        <h3>Social Media</h3>
-        <p>অ্যাকাউন্ট সুরক্ষা ও নিরাপত্তা শেখা</p>
-    </div>
-
-    <div class="card" onclick="openModule('Wi-Fi Security')">
-        <div class="icon">📶</div>
-        <h3>Wi-Fi Security</h3>
-        <p>ওয়াই-ফাই নিরাপত্তার ধারণা শেখা</p>
-    </div>
-
-    <div class="card" onclick="openModule('Database Security')">
-        <div class="icon">🗄️</div>
-        <h3>Database Security</h3>
-        <p>ডেটাবেস সুরক্ষার প্রাথমিক পাঠ</p>
-    </div>
-
-    <div class="card" onclick="openModule('Anonymous Surfing')">
-        <div class="icon">🌐</div>
-        <h3>Anonymous Surfing</h3>
-        <p>অনলাইন গোপনীয়তা রক্ষা শেখা</p>
-    </div>
-
+ <div class="card" onclick="openModule('social')">
+  <div class="icon">📱</div>
+  <h3>Social Media</h3>
+  <p>অ্যাকাউন্ট সুরক্ষা</p>
+ </div>
+ <div class="card" onclick="openModule('wifi')">
+  <div class="icon">📶</div>
+  <h3>Wi-Fi Security</h3>
+  <p>নিজের Wi-Fi নিরাপদ রাখা</p>
+ </div>
+ <div class="card" onclick="openModule('database')">
+  <div class="icon">🗄️</div>
+  <h3>Database Security</h3>
+  <p>ডেটাবেস সুরক্ষার পাঠ</p>
+ </div>
+ <div class="card" onclick="openModule('privacy')">
+  <div class="icon">🌐</div>
+  <h3>Online Privacy</h3>
+  <p>অনলাইন গোপনীয়তা</p>
+ </div>
 </div>
 
 <div class="panel" id="details">
-    <h2>🔐 Welcome to the Lab</h2>
-    <p>স্যার, শেখার জন্য উপরের যেকোনো একটি মডিউল নির্বাচন করুন।</p>
+ <h2>🔐 Welcome to the Lab</h2>
+ <p>স্যার, শেখার জন্য উপরের একটি মডিউল নির্বাচন করুন।</p>
 </div>
 
 <div class="panel">
-    <h2>💻 Learning Center</h2>
-    <p>Linux, Termux এবং Cybersecurity-এর প্রাথমিক ধারণা শিখুন।</p>
-    <button onclick="openModule('Linux ও Termux')">
-        START LEARNING
-    </button>
+ <h2>🔑 Password Strength Checker</h2>
+ <p>নিজের পরীক্ষামূলক পাসওয়ার্ড লিখে শক্তির ধারণা নিন। এটি কোথাও পাঠানো হয় না।</p>
+ <input id="pass" type="password" placeholder="পরীক্ষামূলক পাসওয়ার্ড লিখুন">
+ <button onclick="checkPassword()">CHECK PASSWORD</button>
+ <p id="passResult">ফলাফল এখানে দেখা যাবে।</p>
+</div>
+
+<div class="panel">
+ <h2>📡 Network Information</h2>
+ <p id="networkInfo">তথ্য দেখা হচ্ছে...</p>
+ <button onclick="showNetwork()">REFRESH</button>
+</div>
+
+<div class="panel">
+ <h2>💻 Linux & Termux Learning</h2>
+ <p>নিচের নিরাপদ প্রাথমিক কমান্ডগুলো শিখুন।</p>
+ <button onclick="openModule('linux')">OPEN COMMAND LESSON</button>
+</div>
+
+<div class="panel">
+ <h2>📚 Learning Progress</h2>
+ <p id="progress">সম্পন্ন পাঠ: 0</p>
+ <button onclick="resetProgress()">RESET PROGRESS</button>
 </div>
 
 <footer>
-    BIJOY HACKING LAB © 2026<br>
-    Learn ethically. Stay secure.
+ BIJOY HACKING LAB © 2026<br>
+ Learn ethically. Stay secure.
 </footer>
 
 <script>
-function openModule(name) {
-    document.getElementById("details").innerHTML =
-        "<h2>🔐 " + name + "</h2>" +
-        "<p>এই বিভাগটি শেখার জন্য তৈরি। " +
-        "শুধু নিজের সিস্টেম বা অনুমতি পাওয়া পরিবেশে " +
-        "নিরাপত্তা পরীক্ষা করুন।</p>" +
-        "<button onclick=\"showWelcome()\">BACK</button>";
+const lessons={
+ social:{
+ title:"📱 Social Media Security",
+ text:[
+ "১. প্রতিটি অ্যাকাউন্টে আলাদা পাসওয়ার্ড ব্যবহার করুন।",
+ "২. Two-Factor Authentication চালু রাখুন।",
+ "৩. অচেনা লিংকে লগইন করবেন না।",
+ "৪. লগইন অ্যালার্ট চালু রাখুন।",
+ "৫. সন্দেহজনক ডিভাইস থেকে লগআউট করুন।"
+ ]},
+ wifi:{
+ title:"📶 Wi-Fi Security",
+ text:[
+ "১. নিজের রাউটারের ডিফল্ট অ্যাডমিন পাসওয়ার্ড বদলান।",
+ "২. WPA2-AES বা WPA3 নিরাপত্তা ব্যবহার করুন।",
+ "৩. রাউটারের সফটওয়্যার আপডেট রাখুন।",
+ "৪. অতিথিদের জন্য Guest Network ব্যবহার করতে পারেন।",
+ "৫. অচেনা ডিভাইস দেখলে রাউটারের তালিকা যাচাই করুন।"
+ ]},
+ database:{
+ title:"🗄️ Database Security",
+ text:[
+ "১. ডেটাবেসে শক্তিশালী অ্যাক্সেস নিয়ন্ত্রণ রাখুন।",
+ "২. নিয়মিত ব্যাকআপ রাখুন।",
+ "৩. সংবেদনশীল তথ্য এনক্রিপ্ট করুন।",
+ "৪. সফটওয়্যার আপডেট রাখুন।",
+ "৫. প্রয়োজন অনুযায়ী ব্যবহারকারীর অনুমতি দিন।"
+ ]},
+ privacy:{
+ title:"🌐 Online Privacy",
+ text:[
+ "১. অ্যাপের অপ্রয়োজনীয় অনুমতি বন্ধ রাখুন।",
+ "২. ব্যক্তিগত তথ্য প্রকাশে সতর্ক থাকুন।",
+ "৩. ব্রাউজার ও অ্যাপ আপডেট রাখুন।",
+ "৪. পাবলিক Wi-Fi-তে সংবেদনশীল কাজ এড়িয়ে চলুন।",
+ "৫. গোপনীয়তা সেটিংস নিয়মিত পরীক্ষা করুন।"
+ ]},
+ linux:{
+ title:"💻 Linux & Termux Commands",
+ text:[
+ "ফোল্ডার দেখা: ls",
+ "বর্তমান অবস্থান: pwd",
+ "নতুন ফোল্ডার: mkdir test",
+ "ফোল্ডারে ঢোকা: cd test",
+ "এক ধাপ পেছনে: cd ..",
+ "ফাইল তৈরি: touch file.txt",
+ "ফাইল পড়া: cat file.txt",
+ "টার্মিনাল পরিষ্কার: clear",
+ "নিজের সিস্টেমের তথ্য: uname -a",
+ "বর্তমান ব্যবহারকারী: whoami"
+ ]}
+};
+
+function openModule(id){
+ const item=lessons[id];
+ if(!item)return;
+ let html="<h2>"+item.title+"</h2>";
+ item.text.forEach(line=>html+="<p>"+line+"</p>");
+ html+='<button onclick="completeLesson(\''+id+'\')">LESSON COMPLETE</button>';
+ html+='<button onclick="showWelcome()">BACK</button>';
+ document.getElementById("details").innerHTML=html;
 }
 
-function showWelcome() {
-    document.getElementById("details").innerHTML =
-        "<h2>🔐 Welcome to the Lab</h2>" +
-        "<p>স্যার, শেখার জন্য উপরের যেকোনো একটি মডিউল নির্বাচন করুন।</p>";
+function showWelcome(){
+ document.getElementById("details").innerHTML=
+ '<h2>🔐 Welcome to the Lab</h2><p>স্যার, শেখার জন্য একটি মডিউল নির্বাচন করুন।</p>';
 }
+
+function completeLesson(id){
+ let done=JSON.parse(localStorage.getItem("bijoyDone")||"[]");
+ if(!done.includes(id))done.push(id);
+ localStorage.setItem("bijoyDone",JSON.stringify(done));
+ updateProgress();
+ document.getElementById("details").innerHTML=
+ '<h2>✅ পাঠ সম্পন্ন হয়েছে!</h2><p>আপনার শেখার অগ্রগতি সংরক্ষিত হয়েছে।</p><button onclick="showWelcome()">BACK</button>';
+}
+
+function updateProgress(){
+ let done=JSON.parse(localStorage.getItem("bijoyDone")||"[]");
+ document.getElementById("progress").innerText=
+ "সম্পন্ন পাঠ: "+done.length+" / 5";
+}
+
+function resetProgress(){
+ localStorage.removeItem("bijoyDone");
+ updateProgress();
+}
+
+function checkPassword(){
+ const p=document.getElementById("pass").value;
+ const out=document.getElementById("passResult");
+ if(!p){out.innerText="আগে একটি পরীক্ষামূলক পাসওয়ার্ড লিখুন।";return;}
+ let score=0;
+ if(p.length>=12)score++;
+ if(/[a-z]/.test(p)&&/[A-Z]/.test(p))score++;
+ if(/[0-9]/.test(p))score++;
+ if(/[^A-Za-z0-9]/.test(p))score++;
+ let result=score<=1?"দুর্বল":score<=2?"মাঝারি":"ভালো";
+ out.innerText="শক্তির ধারণা: "+result+
+ "। দৈর্ঘ্য ও বৈচিত্র্য বাড়ান এবং প্রতিটি অ্যাকাউন্টে আলাদা পাসওয়ার্ড ব্যবহার করুন।";
+}
+
+function showNetwork(){
+ let info=navigator.onLine?"ইন্টারনেট সংযোগ: Online":"ইন্টারনেট সংযোগ: Offline";
+ let connection=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+ if(connection){
+  info+="<br>সংযোগের ধরন: "+(connection.effectiveType||"তথ্য নেই");
+ }
+ document.getElementById("networkInfo").innerHTML=info+
+ "<br><span class='small'>এটি শুধু ব্রাউজারের সাধারণ সংযোগের অবস্থা দেখায়।</span>";
+}
+
+window.addEventListener("online",showNetwork);
+window.addEventListener("offline",showNetwork);
+updateProgress();
+showNetwork();
 </script>
 
 </body>
